@@ -1,6 +1,8 @@
 extends Node
 class_name SaveManager
 
+# Assumes you're save files are named "GameData" and stored in "Utils"
+
 const SAVE_GAME_PATH := "user://save_%s.tres"
 const SAVE_INFO_PATH := "user://save_%s_info.tres"
 

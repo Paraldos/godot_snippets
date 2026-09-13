@@ -1,6 +1,10 @@
 extends Node2D
 class_name HitEffect
 
+# shakes and changes the color of a character on hit.
+# add a sound effect and/or particle effects if needed.
+# add node to a player, enemy or whatever (right under the parent) and acll "play()".
+
 @export var actor: Node2D
 
 @export_group("Shake")

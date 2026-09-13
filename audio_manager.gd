@@ -1,5 +1,9 @@
 extends Node
 
+# preload sound effects in SOUNDS, and use enums as key for the call
+# e.g enumy -> Sound {HIT} -> SOUNDS = {Sound.HIT = preload('path_to_the_hit_sound')}
+# assumes you got a audio buss called SFX -> change when needed.
+
 enum Sound {}
 
 const SFX_BUS := &"SFX"
