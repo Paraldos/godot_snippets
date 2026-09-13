@@ -6,6 +6,7 @@ class_name SaveManager
 # Assumes:
 # - Save data uses a Resource class named GameData.
 # - The active GameData instance is stored in Utils.game_data.
+# - Data that should be saved, such as player health or story flags, is stored in Utils.game_data.
 # - Save files are stored in Godot's user:// directory.
 #
 # Example:
