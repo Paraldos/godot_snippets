@@ -1,16 +1,25 @@
 extends CanvasLayer
 
-# Simple Modal controller
+# Simple manager for opening and closing Modal scenes.
+#
+# Intended to be registered as an Autoload named ModalManager:
+# - Keeps one modal active at a time.
+# - Pauses the game while a modal is open.
+# - Manages the background overlay.
+# - Provides the shared ANIMATION_DURATION.
+#
+# Modal scenes must have a root node that inherits from Modal.
+#
+# Optional: preload frequently used modals here.
+# Example:
+# var example_modal := preload("uid://example")
+# ModalManager.open_modal(ModalManager.example_modal)
 
 const ANIMATION_DURATION = 0.4
 
 @export_group("background")
 @export var background_color := Color("Black")
 @export var background_opacity := 0.4
-
-# Optional: preload modal in the manager and reference from here.
-# e.g.: var exampel_modal = preload("uid://123test123")
-# e.g.: ModalManager.open_modal(ModalManager.exampel_modal)
 
 var background: ColorRect
 var modal: Modal = null

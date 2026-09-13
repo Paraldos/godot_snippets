@@ -2,10 +2,15 @@
 extends CanvasLayer
 class_name Modal
 
-# Simple Modal template, sliding in from Screen Edge.
-# HINT: Works best if used with ModalManager
-# No background overlay Included / Background is Managed in ModalManager
-# ANIMATION_DURATION from ModalManager. Replace with local variable if ModalManager is not used.
+# Simple modal template that slides in from a selected screen edge.
+#
+# Designed for use with ModalManager:
+# - The background overlay is managed by ModalManager.
+# - ANIMATION_DURATION is provided by ModalManager.
+#
+# When used without ModalManager:
+# - Add your own background overlay if needed.
+# - Replace ModalManager.ANIMATION_DURATION with a local constant.
 
 enum Directions {
 	TOP,
