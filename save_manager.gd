@@ -1,7 +1,17 @@
 extends Node
 class_name SaveManager
 
-# Assumes you're save files are named "GameData" and stored in "Utils"
+# Static manager for creating, saving, and loading game data.
+#
+# Assumes:
+# - Save data uses a Resource class named GameData.
+# - The active GameData instance is stored in Utils.game_data.
+# - Save files are stored in Godot's user:// directory.
+#
+# Example:
+# SaveManager.new_game()
+# SaveManager.save_game(0)
+# SaveManager.load_game(0)
 
 const SAVE_GAME_PATH := "user://save_%s.tres"
 const SAVE_INFO_PATH := "user://save_%s_info.tres"
