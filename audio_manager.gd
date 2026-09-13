@@ -1,8 +1,17 @@
 extends Node
 
-# preload sound effects in SOUNDS, and use enums as key for the call
-# e.g enumy -> Sound {HIT} -> SOUNDS = {Sound.HIT = preload('path_to_the_hit_sound')}
-# assumes you got a audio buss called SFX -> change when needed.
+# Global sound-effect manager. Register this script as an Autoload.
+#
+# Add sound identifiers to the Sound enum and map them to preloaded audio streams:
+#
+# enum Sound { HIT }
+#
+# const SOUNDS := {
+#     Sound.HIT: preload("res://audio/hit.ogg"),
+# }
+#
+# Play sounds using play_sfx() or play_sfx_2d().
+# Requires an audio bus named "SFX". Change SFX_BUS if necessary.
 
 enum Sound {}
 
